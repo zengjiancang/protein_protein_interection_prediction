@@ -8,6 +8,10 @@ import java.io.*;
 public class CheckWrongFasta {
     public static void getWrongFile(String inputPath, String outputPath, int fileNum, String wrongFileName) throws IOException{
 
+        File outputDir = new File(outputPath);
+        if(!outputDir.exists()){
+            outputDir.mkdirs();
+        }
         BufferedWriter wrongWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\" + wrongFileName + ".txt"), false), "utf-8"));
         for(int i = 1; i <= fileNum; ++ i){
 

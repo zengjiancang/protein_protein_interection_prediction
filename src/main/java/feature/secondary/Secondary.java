@@ -38,7 +38,7 @@ public class Secondary {
         for(int i = 0; i < scoreList.size(); ++ i){
             variance += (Math.pow(scoreList.get(i) - average, 2));
         }
-        return variance / (scoreList.size() - 1);
+        return variance / scoreList.size();
     }
 
     private static double calcPearsonCorrelationCoefficient(ArrayList<Double> scoreList1, ArrayList<Double> scoreList2, double average1, double average2, double standardDeviation1, double standardDeviation2){
@@ -59,6 +59,7 @@ public class Secondary {
         int fileNums = inputFiles.length;
         for(int i = 0; i < fileNums; ++ i){
             File file = inputFiles[i];
+            System.out.println(file.getAbsolutePath());
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "utf-8"));
             StringBuilder secondaryStructureString = new StringBuilder();
             ArrayList<Double> coilScoreList = new ArrayList<Double>();
@@ -79,19 +80,19 @@ public class Secondary {
             bufferedReader.close();
 
 
-            double coilAverage1 = calcAverage(coilScoreList);
-            double helixAverage1 = calcAverage(helixScoreList);
-            double strandAverage1 = calcAverage(strandScoreList);
-            double coilStandardDeviation1 = Math.sqrt(calcVariance(coilScoreList, coilAverage1));
-            double helixStandardDeviation1 = Math.sqrt(calcVariance(helixScoreList, helixAverage1));
-            double strandStandardDeviation1 = Math.sqrt(calcVariance(strandScoreList, strandAverage1));
+            double coilAverage = calcAverage(coilScoreList);
+            double helixAverage = calcAverage(helixScoreList);
+            double strandAverage = calcAverage(strandScoreList);
+            double coilStandardDeviation = Math.sqrt(calcVariance(coilScoreList, coilAverage));
+            double helixStandardDeviation = Math.sqrt(calcVariance(helixScoreList, helixAverage));
+            double strandStandardDeviation = Math.sqrt(calcVariance(strandScoreList, strandAverage));
 
             BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(outputDirPath + "\\" + file.getName().replace(".ss2", ".txt")), false), "utf-8"));
-            bufferedWriter.write(calcSecondaryFrequency(secondaryStructureString) + "," + coilAverage1 + "," + helixAverage1 + "," + strandAverage1 + ","
-                    + coilStandardDeviation1 + "," + helixStandardDeviation1 + "," + strandStandardDeviation1
-                    + calcPearsonCorrelationCoefficient(coilScoreList, helixScoreList, coilAverage1, helixAverage1, coilStandardDeviation1, helixStandardDeviation1) + ","
-                    + calcPearsonCorrelationCoefficient(coilScoreList, strandScoreList, coilAverage1, strandAverage1, coilStandardDeviation1, strandStandardDeviation1) + ","
-                    + calcPearsonCorrelationCoefficient(helixScoreList, strandScoreList, helixAverage1, strandAverage1, helixStandardDeviation1, strandStandardDeviation1));
+            bufferedWriter.write(calcSecondaryFrequency(secondaryStructureString) + "," + coilAverage + "," + helixAverage + "," + strandAverage + ","
+                    + coilStandardDeviation + "," + helixStandardDeviation + "," + strandStandardDeviation + ","
+                    + calcPearsonCorrelationCoefficient(coilScoreList, helixScoreList, coilAverage, helixAverage, coilStandardDeviation, helixStandardDeviation) + ","
+                    + calcPearsonCorrelationCoefficient(coilScoreList, strandScoreList, coilAverage, strandAverage, coilStandardDeviation, strandStandardDeviation) + ","
+                    + calcPearsonCorrelationCoefficient(helixScoreList, strandScoreList, helixAverage, strandAverage, helixStandardDeviation, strandStandardDeviation));
             bufferedWriter.flush();
             bufferedWriter.close();
         }

@@ -3,6 +3,7 @@ package run;
 import util.ReplaceBadAminoAcid;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,22 +20,29 @@ public class Test {
 //        }
 //        String s2 = ">dip:DIP-250N|refseq:NP_499284|uniprot:P41958";
 //        System.out.println(ReplaceBadAminoAcid.replaceAminoAcid("XBZU"));
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(new File("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\test.pssm")), "utf-8"));
-        String inputLine = bufferedReader.readLine();
-        inputLine = bufferedReader.readLine();
-        inputLine = bufferedReader.readLine();
-        inputLine = bufferedReader.readLine();
-        int lineNum = 0;
-        String s = "   1 M C   0.999  0.001  0.000";
-//        while(lineNum <= 0 && inputLine != null){
-            String str[] = s.trim().split("[ ]+");
-            for(int i = 0; i < str.length; i ++){
-                System.out.println(str[i]);
-            }
-            lineNum ++;
-            inputLine = bufferedReader.readLine();
-//        }
-        bufferedReader.close();
+//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(new File("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\test.pssm")), "utf-8"));
+//        String inputLine = bufferedReader.readLine();
+//        inputLine = bufferedReader.readLine();
+//        inputLine = bufferedReader.readLine();
+//        inputLine = bufferedReader.readLine();
+//        int lineNum = 0;
+//        String s = "   1 M C   0.999  0.001  0.000";
+////        while(lineNum <= 0 && inputLine != null){
+//            String str[] = s.trim().split("[ ]+");
+//            for(int i = 0; i < str.length; i ++){
+//                System.out.println(str[i]);
+//            }
+//            lineNum ++;
+//            inputLine = bufferedReader.readLine();
+////        }
+//        bufferedReader.close();
+
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        a.add(1);
+        a.add(2);
+        System.out.println(a.size());
+        a.clear();
+        System.out.println(a.size());
 
     }
 }
