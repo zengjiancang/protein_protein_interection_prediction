@@ -4,6 +4,7 @@ import util.ReplaceBadAminoAcid;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -37,12 +38,16 @@ public class Test {
 ////        }
 //        bufferedReader.close();
 
-        ArrayList<Integer> a = new ArrayList<Integer>();
-        a.add(1);
-        a.add(2);
-        System.out.println(a.size());
-        a.clear();
-        System.out.println(a.size());
+//        ArrayList<Integer> a = new ArrayList<Integer>();
+//        a.add(1);
+//        a.add(2);
+//        System.out.println(a.size());
+//        a.clear();
+//        System.out.println(a.size());
+        Random random = new Random();
+        for(int i = 0; i < 10; ++ i){
+            System.out.println(random.nextInt(2));
+        }
 
     }
 }

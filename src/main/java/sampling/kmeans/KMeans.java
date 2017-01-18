@@ -106,7 +106,7 @@ public class KMeans {
         double nowTotalDis = 0.0;
         double prePreTotalDis = Double.MAX_VALUE;
         int[] centerFlag = new int[instanceNum];//标记样本属于第几个中心
-        double[] centerDis = new double[instanceNum];
+        double[] centerDis = new double[instanceNum];//样本距离中心的距离
         int round = 1;
         while(true){
             System.out.println("round " + round + " preTotalDis: " + prePreTotalDis + " nowTotalDis: " + preTotalDis);

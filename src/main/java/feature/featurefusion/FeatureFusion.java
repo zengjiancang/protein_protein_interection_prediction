@@ -29,6 +29,9 @@ public class FeatureFusion {
             String line = bufferedReader.readLine();
             String[] feature1 = line.split(",");
             line = bufferedReader.readLine();
+            if(line == null){
+                continue;
+            }
             bufferedReader.close();
             String[] feature2 = line.split(",");
             int feaLength = feature1.length;
@@ -57,8 +60,11 @@ public class FeatureFusion {
             String line = bufferedReader.readLine();
             String[] feature1 = line.split(",");
             line = bufferedReader.readLine();
-            bufferedReader.close();
+            if(line == null){
+                continue;
+            }
             String[] feature2 = line.split(",");
+            bufferedReader.close();
             int feaLength = feature1.length;
             for(int i = 0; i < feaLength - 1; ++ i){
                 bufferedWriter.write(calcArithmeticMean(Double.parseDouble(feature1[i]), Double.parseDouble(feature2[i])) + ",");

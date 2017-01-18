@@ -1,5 +1,7 @@
 package run;
 
+import data.AminoAcidsReorder;
+import data.ProteinRecombine;
 import feature.featurefusion.FeatureFusion;
 import feature.pseacc.PseACC;
 import feature.pssm.PSSM;
@@ -30,6 +32,8 @@ public class RunPPI {
 
         //获取反例序列
 //        GetNegatomeData.getNegatomeData("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\negatome.txt");
+//        AminoAcidsReorder.getAminoAcidsReorder("D:\\zjcDATA\\data\\positive\\Hsapi20160731_new", "D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", 1000000);
+//        ProteinRecombine.getProteinRecombine("D:\\zjcDATA\\data\\positive", "D:\\zjcDATA\\data\\negative\\ProteinRecombine", 10000);
 
         //检查是否是一对都存在
 //        CheckIsPairProtein.checkIsPairProteins("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\negative\\Negatome");
@@ -43,6 +47,30 @@ public class RunPPI {
 //        CheckIsPairProtein.checkIsPairProteins("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\positive\\Hsapi20160731");
 
 //        //获取Ngram的bat执行文件
+
+//        NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine", 1, 0, 0, "ProteinRecombine");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine", 1, 0, 1, "ProteinRecombine");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine", 2, 0, 0, "ProteinRecombine");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine", 2, 0, 1, "ProteinRecombine");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine", 2, 1, 0, "ProteinRecombine");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine", 2, 1, 1, "ProteinRecombine");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine", 3, 0, 0, "ProteinRecombine");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine", 3, 0, 1, "ProteinRecombine");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine", 3, 1, 0, "ProteinRecombine");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine", 3, 1, 1, "ProteinRecombine");
+
+
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder", 1, 0, 0, "AminoAcidsReorder");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder", 1, 0, 1, "AminoAcidsReorder");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder", 2, 0, 0, "AminoAcidsReorder");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder", 2, 0, 1, "AminoAcidsReorder");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder", 2, 1, 0, "AminoAcidsReorder");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder", 2, 1, 1, "AminoAcidsReorder");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder", 3, 0, 0, "AminoAcidsReorder");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder", 3, 0, 1, "AminoAcidsReorder");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder", 3, 1, 0, "AminoAcidsReorder");
+//          NGramCommand.getNGramBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder", 3, 1, 1, "AminoAcidsReorder");
+
 //        NGramCommand.getNGramBat("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\negative\\Negatome_new", "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\feature\\ngram\\Negatome", 1, 0, 0, "Negatome");
 //        NGramCommand.getNGramBat("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\negative\\Negatome_new", "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\feature\\ngram\\Negatome", 1, 0, 1, "Negatome");
 //        NGramCommand.getNGramBat("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\negative\\Negatome_new", "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\feature\\ngram\\Negatome", 2, 0, 0, "Negatome");
@@ -143,6 +171,30 @@ public class RunPPI {
 //        NGramCommand.getNGramBat("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\positive\\Scere20160731_new", "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\feature\\ngram\\Scere20160731", 3, 1, 1, "Scere20160731");
 //
 //        //获取Kskip的bat执行文件
+
+//                KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 1, 0, 0, "ProteinRecombine");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 1, 0, 1, "ProteinRecombine");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 2, 0, 0, "ProteinRecombine");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 2, 0, 1, "ProteinRecombine");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 2, 1, 0, "ProteinRecombine");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 2, 1, 1, "ProteinRecombine");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 0, 0, 0, "ProteinRecombine");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 0, 0, 1, "ProteinRecombine");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 1, 1, 0, "ProteinRecombine");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 1, 1, 1, "ProteinRecombine");
+
+
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder", 1, 0, 0, "AminoAcidsReorder");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder", 1, 0, 1, "AminoAcidsReorder");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder", 2, 0, 0, "AminoAcidsReorder");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder", 2, 0, 1, "AminoAcidsReorder");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder", 2, 1, 0, "AminoAcidsReorder");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder", 2, 1, 1, "AminoAcidsReorder");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder", 0, 0, 0, "AminoAcidsReorder");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder", 0, 0, 1, "AminoAcidsReorder");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder", 1, 1, 0, "AminoAcidsReorder");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder", 1, 1, 1, "AminoAcidsReorder");
+
 //        KSkipCommand.getKSkipBat("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\negative\\Negatome_new", "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\feature\\kskip\\Negatome", 1, 0, 0, "Negatome");
 //        KSkipCommand.getKSkipBat("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\negative\\Negatome_new", "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\feature\\kskip\\Negatome", 1, 0, 1, "Negatome");
 //        KSkipCommand.getKSkipBat("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\negative\\Negatome_new", "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\feature\\kskip\\Negatome", 2, 0, 0, "Negatome");
@@ -243,6 +295,9 @@ public class RunPPI {
 //        KSkipCommand.getKSkipBat("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\positive\\Scere20160731_new", "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\data\\feature\\kskip\\Scere20160731", 1, 1, 1, "Scere20160731");
 
         //获取188的执行文件
+
+//        F188Command.get188Shell("/home/zjc/PPI/188featureExtract/AminoAcidsReorder", "/home/zjc/PPI/188featureExtract/feature/AminoAcidsReorder", "AminoAcidsReorder", 7222);
+//        F188Command.get188Shell("/home/zjc/PPI/188featureExtract/ProteinRecombine", "/home/zjc/PPI/188featureExtract/feature/ProteinRecombine", "ProteinRecombine", 10000);
 //        F188Command.get188Shell("/home/zjc/PPI/188featureExtract/Negatome_new", "/home/zjc/PPI/188featureExtract/feature/Negatome", "Negatome", 6314);
 //        F188Command.get188Shell("/home/zjc/PPI/188featureExtract/positive/Celeg20160731_new", "/home/zjc/PPI/188featureExtract/feature/Celeg20160731", "Celeg20160731", 3886);
 //        F188Command.get188Shell("/home/zjc/PPI/188featureExtract/positive/Dmela20160731_new", "/home/zjc/PPI/188featureExtract/feature/Dmela20160731", "Dmela20160731", 22127);
@@ -254,6 +309,8 @@ public class RunPPI {
 //        F188Command.get188Shell("/home/zjc/PPI/188featureExtract/positive/Scere20160731_new", "/home/zjc/PPI/188featureExtract/feature/Scere20160731", "Scere20160731", 22596);
 
         //获取pseacc输入格式的数据
+//        DealForPseACC.getPseACCFormat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "-1", 1);
+//        DealForPseACC.getPseACCFormat("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder", "-1", 1);
 //        DealForPseACC.getPseACCFormat("D:\\zjcDATA\\data\\negative\\Negatome_new", "-1", 1);
 //        DealForPseACC.getPseACCFormat("D:\\zjcDATA\\data\\positive\\Celeg20160731_new", "1", 0);
 //        DealForPseACC.getPseACCFormat("D:\\zjcDATA\\data\\positive\\Dmela20160731_new", "1", 0);
@@ -265,6 +322,8 @@ public class RunPPI {
 //        DealForPseACC.getPseACCFormat("D:\\zjcDATA\\data\\positive\\Scere20160731_new", "1", 0);
 
         //获取pseacc的执行文件
+//        PseACCCommand.getPseACCShell("/home/zjc/PPI/pseb-linux-3.0/prebin/AminoAcidsReorder_pseacc", "/home/zjc/PPI/pseb-linux-3.0/prebin/feature/AminoAcidsReorder", "AminoAcidsReorder", 7222);
+//        PseACCCommand.getPseACCShell("/home/zjc/PPI/pseb-linux-3.0/prebin/ProteinRecombine_pseacc", "/home/zjc/PPI/pseb-linux-3.0/prebin/feature/ProteinRecombine", "ProteinRecombine", 10000);
 //        PseACCCommand.getPseACCShell("/home/zjc/PPI/pseb-linux-3.0/prebin/Negatome_new_pseacc", "/home/zjc/PPI/pseb-linux-3.0/prebin/feature/Negatome", "Negatome", 6314);
 //        PseACCCommand.getPseACCShell("/home/zjc/PPI/pseb-linux-3.0/prebin/positive/Celeg20160731_new_pseacc", "/home/zjc/PPI/pseb-linux-3.0/prebin/feature/Celeg20160731", "Celeg20160731", 3886);
 //        PseACCCommand.getPseACCShell("/home/zjc/PPI/pseb-linux-3.0/prebin/positive/Dmela20160731_new_pseacc", "/home/zjc/PPI/pseb-linux-3.0/prebin/feature/Dmela20160731", "Dmela20160731", 22127);
@@ -286,9 +345,14 @@ public class RunPPI {
 //        PseACC.pseACCFeature("D:\\zjcDATA\\data\\feature\\pseacc1\\Rnorv20160731", "D:\\zjcDATA\\data\\feature\\pseacc\\Rnorv20160731");
 //        PseACC.pseACCFeature("D:\\zjcDATA\\data\\feature\\pseacc1\\Scere20160731", "D:\\zjcDATA\\data\\feature\\pseacc\\Scere20160731");
 //        PseACC.pseACCFeature("D:\\zjcDATA\\data\\feature\\pseacc1\\Negatome", "D:\\zjcDATA\\data\\feature\\pseacc\\Negatome");
+//        PseACC.pseACCFeature("D:\\zjcDATA\\data\\feature\\pseacc1\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\pseacc\\AminoAcidsReorder");
+//        PseACC.pseACCFeature("D:\\zjcDATA\\data\\feature\\pseacc1\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\pseacc\\ProteinRecombine");
+
 
         //把成对的蛋白质序列分拆成一个文件一条  pseacc替换过的
 
+//        SplitForTwoFastaFile.splitFile("D:\\zjcDATA\\data\\negative\\AminoAcidsReorder_pseacc");
+//        SplitForTwoFastaFile.splitFile("D:\\zjcDATA\\data\\negative\\ProteinRecombine_pseacc");
 //        SplitForTwoFastaFile.splitFile("D:\\zjcDATA\\data\\negative\\Negatome_new_pseacc_replace");
 //        SplitForTwoFastaFile.splitFile("D:\\zjcDATA\\data\\positive\\pseacc_replace\\Celeg20160731_new_pseacc");
 //        SplitForTwoFastaFile.splitFile("D:\\zjcDATA\\data\\positive\\pseacc_replace\\Dmela20160731_new_pseacc");
@@ -300,6 +364,8 @@ public class RunPPI {
 //        SplitForTwoFastaFile.splitFile("D:\\zjcDATA\\data\\positive\\pseacc_replace\\Scere20160731_new_pseacc");
 
         //跑二级结构的命令
+//        SecondaryCommand.getSecondaryShell("/home/liuchong/zengjiancang/psipred/BLAST+/single_replace/AminoAcidsReorder_single", "AminoAcidsReorder", 7222);
+//        SecondaryCommand.getSecondaryShell("/home/liuchong/zengjiancang/psipred/BLAST+/single_replace/ProteinRecombine_single", "ProteinRecombine", 10000);
 //        SecondaryCommand.getSecondaryShell("/home/liuchong/zengjiancang/psipred/BLAST+/single_replace/Negatome_single", "Negatome", 6314);
 //        SecondaryCommand.getSecondaryShell("/home/liuchong/zengjiancang/psipred/BLAST+/single_replace/Celeg20160731_single", "Celeg20160731", 3886);
 //        SecondaryCommand.getSecondaryShell("/home/liuchong/zengjiancang/psipred/BLAST+/single_replace/Dmela20160731_single", "Dmela20160731", 22127);
@@ -311,6 +377,8 @@ public class RunPPI {
 //        SecondaryCommand.getSecondaryShell("/home/liuchong/zengjiancang/psipred/BLAST+/single_replace/Scere20160731_single", "Scere20160731", 22596);
 
         //获取pssm矩阵的命令
+//        PSSMCommand.getPSSMShell("/home/zjc/PPI/secondary/single_replace/AminoAcidsReorder_single", "/home/zjc/PPI/secondary/pssm/AminoAcidsReorder/", "AminoAcidsReorder", 7222);
+//        PSSMCommand.getPSSMShell("/home/zjc/PPI/secondary/single_replace/ProteinRecombine_single", "/home/zjc/PPI/secondary/pssm/ProteinRecombine/", "ProteinRecombine", 10000);
 //        PSSMCommand.getPSSMShell("/home/zjc/PPI/secondary/single_replace/Negatome_single", "/home/zjc/PPI/secondary/pssm/Negatome/", "Negatome", 6314);
 //        PSSMCommand.getPSSMShell("/home/zjc/PPI/secondary/single_replace/Celeg20160731_single", "/home/zjc/PPI/secondary/pssm/Celeg20160731/", "Celeg20160731", 3886);
 //        PSSMCommand.getPSSMShell("/home/zjc/PPI/secondary/single_replace/Dmela20160731_single", "/home/zjc/PPI/secondary/pssm/Dmela20160731/","Dmela20160731", 22127);
@@ -331,8 +399,12 @@ public class RunPPI {
 //        PSSM.getPSSMFeature("D:\\zjcDATA\\data\\feature\\pssm1\\Negatome", "D:\\zjcDATA\\data\\feature\\pssm\\Negatome");
 //        PSSM.getPSSMFeature("D:\\zjcDATA\\data\\feature\\pssm1\\Rnorv20160731", "D:\\zjcDATA\\data\\feature\\pssm\\Rnorv20160731");
 //        PSSM.getPSSMFeature("D:\\zjcDATA\\data\\feature\\pssm1\\Scere20160731", "D:\\zjcDATA\\data\\feature\\pssm\\Scere20160731");
+//        PSSM.getPSSMFeature("D:\\zjcDATA\\data\\feature\\pssm1\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\pssm\\AminoAcidsReorder");
+//        PSSM.getPSSMFeature("D:\\zjcDATA\\data\\feature\\pssm1\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\pssm\\ProteinRecombine");
 
         //二级结构计算特征
+//        Secondary.getSecondaryFeature("D:\\zjcDATA\\data\\feature\\secondary1\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\secondary\\AminoAcidsReorder");
+//        Secondary.getSecondaryFeature("D:\\zjcDATA\\data\\feature\\secondary1\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\secondary\\ProteinRecombine");
 //        Secondary.getSecondaryFeature("D:\\zjcDATA\\data\\feature\\secondary1\\Celeg20160731", "D:\\zjcDATA\\data\\feature\\secondary\\Celeg20160731");
 //        Secondary.getSecondaryFeature("D:\\zjcDATA\\data\\feature\\secondary1\\Dmela20160731", "D:\\zjcDATA\\data\\feature\\secondary\\Dmela20160731");
 //        Secondary.getSecondaryFeature("D:\\zjcDATA\\data\\feature\\secondary1\\Ecoli20160731", "D:\\zjcDATA\\data\\feature\\secondary\\Ecoli20160731");
@@ -344,6 +416,7 @@ public class RunPPI {
 //        Secondary.getSecondaryFeature("D:\\zjcDATA\\data\\feature\\secondary1\\Scere20160731", "D:\\zjcDATA\\data\\feature\\secondary\\Scere20160731");
 
         //检查得分矩阵和二级结构的错误
+//        CheckWrongFasta.getWrongFile("D:\\zjcDATA\\data\\feature\\pssm\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\pssm_right\\ProteinRecombine", 10000, "pssm_ProteinRecombine_wrong");
 //        CheckWrongFasta.getWrongFile("D:\\zjcDATA\\data\\feature\\pssm\\Celeg20160731", "D:\\zjcDATA\\data\\feature\\pssm_right\\Celeg20160731", 3886, "pssm_Celeg20160731_wrong");
 //        CheckWrongFasta.getWrongFile("D:\\zjcDATA\\data\\feature\\pssm\\Dmela20160731", "D:\\zjcDATA\\data\\feature\\pssm_right\\Dmela20160731", 22127, "pssm_Dmela20160731_wrong");
 //        CheckWrongFasta.getWrongFile("D:\\zjcDATA\\data\\feature\\pssm\\Ecoli20160731", "D:\\zjcDATA\\data\\feature\\pssm_right\\Ecoli20160731", 11626, "pssm_Ecoli20160731_wrong");
@@ -353,6 +426,8 @@ public class RunPPI {
 //        CheckWrongFasta.getWrongFile("D:\\zjcDATA\\data\\feature\\pssm\\Negatome", "D:\\zjcDATA\\data\\feature\\pssm_right\\Negatome", 6314, "pssm_Negatome_wrong");
 //        CheckWrongFasta.getWrongFile("D:\\zjcDATA\\data\\feature\\pssm\\Rnorv20160731", "D:\\zjcDATA\\data\\feature\\pssm_right\\Rnorv20160731", 553, "pssm_Rnorv20160731_wrong");
 //        CheckWrongFasta.getWrongFile("D:\\zjcDATA\\data\\feature\\pssm\\Scere20160731", "D:\\zjcDATA\\data\\feature\\pssm_right\\Scere20160731", 22596, "pssm_Scere20160731_wrong");
+//        CheckWrongFasta.getWrongFile("D:\\zjcDATA\\data\\feature\\secondary\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\secondary_right\\ProteinRecombine", 10000, "secondary_ProteinRecombine_wrong");
+//        CheckWrongFasta.getWrongFile("D:\\zjcDATA\\data\\feature\\secondary\\AminoAcidsReorder", "D:\\zjcDATA\\data\\feature\\secondary_right\\AminoAcidsReorder", 7222, "secondary_AminoAcidsReorder_wrong");
 //        CheckWrongFasta.getWrongFile("D:\\zjcDATA\\data\\feature\\secondary\\Celeg20160731", "D:\\zjcDATA\\data\\feature\\secondary_right\\Celeg20160731", 3886, "secondary_Celeg20160731_wrong");
 //        CheckWrongFasta.getWrongFile("D:\\zjcDATA\\data\\feature\\secondary\\Dmela20160731", "D:\\zjcDATA\\data\\feature\\secondary_right\\Dmela20160731", 22127, "secondary_Dmela20160731_wrong");
 //        CheckWrongFasta.getWrongFile("D:\\zjcDATA\\data\\feature\\secondary\\Ecoli20160731", "D:\\zjcDATA\\data\\feature\\secondary_right\\Ecoli20160731", 11626, "secondary_Ecoli20160731_wrong");
@@ -364,6 +439,116 @@ public class RunPPI {
 //        CheckWrongFasta.getWrongFile("D:\\zjcDATA\\data\\feature\\secondary\\Scere20160731", "D:\\zjcDATA\\data\\feature\\secondary_right\\Scere20160731", 22596, "secondary_Scere20160731_wrong");
 
         //特征融合
+//
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\secondary_right\\AminoAcidsReorder", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\secondary_right\\AminoAcidsReorder");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\secondary_right\\ProteinRecombine", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\secondary_right\\ProteinRecombine");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\pssm_right\\ProteinRecombine", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\pssm_right\\ProteinRecombine");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\pssm_right\\AminoAcidsReorder", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\pssm_right\\AminoAcidsReorder");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\pseacc\\ProteinRecombine", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\pseacc\\ProteinRecombine");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\pseacc\\AminoAcidsReorder", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\pseacc\\AminoAcidsReorder");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\1_0_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\1_0_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\1_0_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\1_0_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\2_0_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\2_0_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\2_0_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\2_0_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\2_1_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\2_1_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\2_1_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\2_1_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\3_0_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\3_0_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\3_0_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\3_0_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\3_1_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\3_1_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\3_1_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\3_1_1");
+
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\1_0_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\1_0_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\1_0_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\1_0_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\2_0_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\2_0_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\2_0_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\2_0_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\2_1_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\2_1_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\2_1_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\2_1_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\3_0_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\3_0_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\3_0_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\3_0_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\3_1_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\3_1_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\3_1_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\3_1_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\0_0_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\0_0_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\0_0_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\0_0_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\1_0_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\1_0_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\1_0_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\1_0_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\1_1_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\1_1_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\1_1_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\1_1_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\2_0_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\2_0_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\2_0_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\2_0_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\2_1_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\2_1_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\2_1_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\2_1_1");
+
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\0_0_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\0_0_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\0_0_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\0_0_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\1_0_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\1_0_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\1_0_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\1_0_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\1_1_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\1_1_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\1_1_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\1_1_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\2_0_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\2_0_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\2_0_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\2_0_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\2_1_0", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\2_1_0");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\2_1_1", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\2_1_1");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\188\\ProteinRecombine", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188\\ProteinRecombine");
+//        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\188\\AminoAcidsReorder", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188\\AminoAcidsReorder");
+
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\188\\ProteinRecombine", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\188\\ProteinRecombine");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\188\\AminoAcidsReorder", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\188\\AminoAcidsReorder");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\0_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\ProteinRecombine\\0_0_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\0_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\ProteinRecombine\\0_0_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\1_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\ProteinRecombine\\1_0_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\1_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\ProteinRecombine\\1_0_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\1_1_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\ProteinRecombine\\1_1_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\1_1_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\ProteinRecombine\\1_1_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\2_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\ProteinRecombine\\2_0_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\2_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\ProteinRecombine\\2_0_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\2_1_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\ProteinRecombine\\2_1_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine\\2_1_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\ProteinRecombine\\2_1_1");
+
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\0_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\AminoAcidsReorder\\0_0_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\0_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\AminoAcidsReorder\\0_0_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\1_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\AminoAcidsReorder\\1_0_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\1_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\AminoAcidsReorder\\1_0_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\1_1_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\AminoAcidsReorder\\1_1_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\1_1_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\AminoAcidsReorder\\1_1_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\2_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\AminoAcidsReorder\\2_0_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\2_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\AminoAcidsReorder\\2_0_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\2_1_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\AminoAcidsReorder\\2_1_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\AminoAcidsReorder\\2_1_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\AminoAcidsReorder\\2_1_1");
+
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\1_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\ProteinRecombine\\1_0_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\1_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\ProteinRecombine\\1_0_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\2_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\ProteinRecombine\\2_0_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\2_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\ProteinRecombine\\2_0_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\2_1_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\ProteinRecombine\\2_1_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\2_1_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\ProteinRecombine\\2_1_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\3_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\ProteinRecombine\\3_0_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\3_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\ProteinRecombine\\3_0_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\3_1_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\ProteinRecombine\\3_1_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\ProteinRecombine\\3_1_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\ProteinRecombine\\3_1_1");
+//
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\1_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\AminoAcidsReorder\\1_0_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\1_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\AminoAcidsReorder\\1_0_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\2_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\AminoAcidsReorder\\2_0_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\2_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\AminoAcidsReorder\\2_0_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\2_1_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\AminoAcidsReorder\\2_1_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\2_1_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\AminoAcidsReorder\\2_1_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\3_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\AminoAcidsReorder\\3_0_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\3_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\AminoAcidsReorder\\3_0_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\3_1_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\AminoAcidsReorder\\3_1_0");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\AminoAcidsReorder\\3_1_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\AminoAcidsReorder\\3_1_1");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pseacc\\ProteinRecombine", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pseacc\\ProteinRecombine");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pseacc\\AminoAcidsReorder", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pseacc\\AminoAcidsReorder");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pssm_right\\ProteinRecombine", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pssm_right\\ProteinRecombine");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pssm_right\\AminoAcidsReorder", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pssm_right\\AminoAcidsReorder");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\secondary_right\\AminoAcidsReorder", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\secondary_right\\AminoAcidsReorder");
+//        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\secondary_right\\ProteinRecombine", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\secondary_right\\ProteinRecombine");
+
+
+
+
+
+
+
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\188\\Celeg20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\188\\Celeg20160731");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\188\\Dmela20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\188\\Dmela20160731");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\188\\Ecoli20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\188\\Ecoli20160731");
@@ -374,6 +559,8 @@ public class RunPPI {
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\188\\Rnorv20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\188\\Rnorv20160731");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\188\\Scere20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\188\\Scere20160731");
 //
+
+
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\Celeg20160731\\0_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\Celeg20160731\\0_0_0");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\Celeg20160731\\0_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\Celeg20160731\\0_0_1");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\kskip\\Celeg20160731\\1_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\kskip\\Celeg20160731\\1_0_0");
@@ -495,6 +682,8 @@ public class RunPPI {
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\Dmela20160731\\3_1_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_1_0");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\Dmela20160731\\3_1_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_1_1");
 //
+
+
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\Ecoli20160731\\1_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\1_0_0");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\Ecoli20160731\\1_0_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\1_0_1");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\Ecoli20160731\\2_0_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\2_0_0");
@@ -572,6 +761,8 @@ public class RunPPI {
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\Negatome\\3_1_0", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\Negatome\\3_1_0");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\ngram\\Negatome\\3_1_1", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\ngram\\Negatome\\3_1_1");
 //
+
+
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pseacc\\Celeg20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pseacc\\Celeg20160731");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pseacc\\Dmela20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pseacc\\Dmela20160731");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pseacc\\Ecoli20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pseacc\\Ecoli20160731");
@@ -582,6 +773,7 @@ public class RunPPI {
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pseacc\\Rnorv20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pseacc\\Rnorv20160731");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pseacc\\Scere20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pseacc\\Scere20160731");
 //
+
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pssm_right\\Celeg20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pssm_right\\Celeg20160731");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pssm_right\\Dmela20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pssm_right\\Dmela20160731");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pssm_right\\Ecoli20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pssm_right\\Ecoli20160731");
@@ -591,6 +783,7 @@ public class RunPPI {
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pssm_right\\Negatome", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pssm_right\\Negatome");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pssm_right\\Rnorv20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pssm_right\\Rnorv20160731");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\pssm_right\\Scere20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\pssm_right\\Scere20160731");
+
 
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\secondary_right\\Celeg20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\secondary_right\\Celeg20160731");
 //        FeatureFusion.runFeatureFusionByHarmonicMean("D:\\zjcDATA\\data\\feature\\secondary_right\\Dmela20160731", "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\secondary_right\\Dmela20160731");
@@ -1239,7 +1432,7 @@ public class RunPPI {
 //                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_Scere20160731_wrong.txt",
 //                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\1_0_1",
 //                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\1_0_1.txt");
-//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_Negatome_wrong.txt",
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_Scere20160731_wrong.txt",
 //                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_Scere20160731_wrong.txt",
 //                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\1_1_0",
 //                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\1_1_0.txt");
@@ -2791,371 +2984,373 @@ public class RunPPI {
 //            KMeans.runKMeans(i, 2717, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Celeg20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Celeg20160731\\Celeg20160731.txt", 272);
 //            KMeans.runKMeans(i, 2717, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Celeg20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Celeg20160731\\Celeg20160731.txt", 272);
 //        }
+//
+//
+//        for(int i = 50; i <= 300; i += 50){
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Hpylo20160731\\Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\0_0_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\0_0_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\1_0_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\1_0_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\1_1_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\1_1_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\2_0_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\2_0_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\2_1_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\2_1_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\1_0_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\1_0_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\2_0_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\2_0_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\2_1_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\2_1_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\3_0_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\3_0_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\3_1_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\3_1_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Hpylo20160731\\Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Hpylo20160731\\Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Hpylo20160731\\Hpylo20160731.txt", 68);
+//
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Hpylo20160731\\Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\0_0_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\0_0_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\1_0_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\1_0_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\1_1_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\1_1_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\2_0_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\2_0_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\2_1_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\2_1_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\1_0_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\1_0_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\2_0_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\2_0_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\2_1_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\2_1_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\3_0_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\3_0_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\3_1_0_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\3_1_1_Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Hpylo20160731\\Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Hpylo20160731\\Hpylo20160731.txt", 68);
+//            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Hpylo20160731\\Hpylo20160731.txt", 68);
+//        }
+//
+//        for(int i = 500; i < 689; i += 100){
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Hsapi20160731\\Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\0_0_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\0_0_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\1_0_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\1_0_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\1_1_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\1_1_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\2_0_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\2_0_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\2_1_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\2_1_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\1_0_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\1_0_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\2_0_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\2_0_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\2_1_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\2_1_1_Hsapi20160731.txt", 690);
+////            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\3_0_0_Hsapi20160731.txt", 690);
+////            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\3_0_1_Hsapi20160731.txt", 690);
+////            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\3_1_0_Hsapi20160731.txt", 690);
+////            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\3_1_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Hsapi20160731\\Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Hsapi20160731\\Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Hsapi20160731\\Hsapi20160731.txt", 690);
+//
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Hsapi20160731\\Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\0_0_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\0_0_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\1_0_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\1_0_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\1_1_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\1_1_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\2_0_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\2_0_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\2_1_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\2_1_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\1_0_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\1_0_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\2_0_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\2_0_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\2_1_0_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\2_1_1_Hsapi20160731.txt", 690);
+////            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\3_0_0_Hsapi20160731.txt", 690);
+////            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\3_0_1_Hsapi20160731.txt", 690);
+////            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\3_1_0_Hsapi20160731.txt", 690);
+////            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\3_1_1_Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Hsapi20160731\\Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Hsapi20160731\\Hsapi20160731.txt", 690);
+//            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Hsapi20160731\\Hsapi20160731.txt", 690);
+//        }
+//
+//        for(int i = 50; i <= 500; i += 50){
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Mmusc20160731\\Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\0_0_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\0_0_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\1_0_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\1_0_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\1_1_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\1_1_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\2_0_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\2_0_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\2_1_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\2_1_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\1_0_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\1_0_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\2_0_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\2_0_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\2_1_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\2_1_1_Mmusc20160731.txt", 238);
+////            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\3_0_0_Mmusc20160731.txt", 238);
+////            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\3_0_1_Mmusc20160731.txt", 238);
+////            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\3_1_0_Mmusc20160731.txt", 238);
+////            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\3_1_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Mmusc20160731\\Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Mmusc20160731\\Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Mmusc20160731\\Mmusc20160731.txt", 238);
+//
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Mmusc20160731\\Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\0_0_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\0_0_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\1_0_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\1_0_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\1_1_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\1_1_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\2_0_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\2_0_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\2_1_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\2_1_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\1_0_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\1_0_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\2_0_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\2_0_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\2_1_0_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\2_1_1_Mmusc20160731.txt", 238);
+////            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\3_0_0_Mmusc20160731.txt", 238);
+////            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\3_0_1_Mmusc20160731.txt", 238);
+////            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\3_1_0_Mmusc20160731.txt", 238);
+////            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\3_1_1_Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Mmusc20160731\\Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Mmusc20160731\\Mmusc20160731.txt", 238);
+//            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Mmusc20160731\\Mmusc20160731.txt", 238);
+//        }
+//
+//        for(int i = 50; i < 527; i += 50){
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Rnorv20160731\\Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\0_0_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\0_0_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\1_0_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\1_0_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\1_1_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\1_1_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\2_0_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\2_0_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\2_1_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\2_1_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\1_0_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\1_0_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\2_0_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\2_0_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\2_1_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\2_1_1_Rnorv20160731.txt", 53);
+////            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\3_0_0_Rnorv20160731.txt", 53);
+////            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\3_0_1_Rnorv20160731.txt", 53);
+////            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\3_1_0_Rnorv20160731.txt", 53);
+////            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\3_1_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Rnorv20160731\\Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Rnorv20160731\\Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Rnorv20160731\\Rnorv20160731.txt", 53);
+//
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Rnorv20160731\\Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\0_0_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\0_0_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\1_0_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\1_0_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\1_1_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\1_1_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\2_0_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\2_0_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\2_1_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\2_1_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\1_0_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\1_0_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\2_0_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\2_0_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\2_1_0_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\2_1_1_Rnorv20160731.txt", 53);
+////            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\3_0_0_Rnorv20160731.txt", 53);
+////            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\3_0_1_Rnorv20160731.txt", 53);
+////            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\3_1_0_Rnorv20160731.txt", 53);
+////            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\3_1_1_Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Rnorv20160731\\Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Rnorv20160731\\Rnorv20160731.txt", 53);
+//            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Rnorv20160731\\Rnorv20160731.txt", 53);
+//        }
+//
+//        for(int i = 100; i <= 500; i += 100){
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Ecoli20160731\\Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\0_0_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\0_0_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\1_0_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\1_0_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\1_1_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\1_1_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\2_0_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\2_0_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\2_1_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\2_1_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\1_0_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\1_0_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\2_0_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\2_0_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\2_1_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\2_1_1_Ecoli20160731.txt", 1162);
+////            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\3_0_0_Ecoli20160731.txt", 1162);
+////            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\3_0_1_Ecoli20160731.txt", 1162);
+////            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\3_1_0_Ecoli20160731.txt", 1162);
+////            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\3_1_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Ecoli20160731\\Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Ecoli20160731\\Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Ecoli20160731\\Ecoli20160731.txt", 1162);
+//
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Ecoli20160731\\Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\0_0_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\0_0_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\1_0_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\1_0_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\1_1_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\1_1_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\2_0_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\2_0_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\2_1_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\2_1_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\1_0_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\1_0_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\2_0_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\2_0_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\2_1_0_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\2_1_1_Ecoli20160731.txt", 1162);
+////            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\3_0_0_Ecoli20160731.txt", 1162);
+////            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\3_0_1_Ecoli20160731.txt", 1162);
+////            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\3_1_0_Ecoli20160731.txt", 1162);
+////            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\3_1_1_Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Ecoli20160731\\Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Ecoli20160731\\Ecoli20160731.txt", 1162);
+//            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Ecoli20160731\\Ecoli20160731.txt", 1162);
+//        }
+//
+//        for(int i = 100; i <= 500; i += 100){
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Dmela20160731\\Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\0_0_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\0_0_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\1_0_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\1_0_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\1_1_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\1_1_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\2_0_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\2_0_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\2_1_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\2_1_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\1_0_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\1_0_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\2_0_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\2_0_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\2_1_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\2_1_1_Dmela20160731.txt", 1494);
+////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_0_0_Dmela20160731.txt", 1494);
+////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_0_1_Dmela20160731.txt", 1494);
+////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_1_0_Dmela20160731.txt", 1494);
+////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_1_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Dmela20160731\\Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Dmela20160731\\Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Dmela20160731\\Dmela20160731.txt", 1494);
+//
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Dmela20160731\\Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\0_0_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\0_0_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\1_0_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\1_0_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\1_1_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\1_1_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\2_0_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\2_0_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\2_1_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\2_1_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\1_0_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\1_0_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\2_0_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\2_0_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\2_1_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\2_1_1_Dmela20160731.txt", 1494);
+////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_0_0_Dmela20160731.txt", 1494);
+////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_0_1_Dmela20160731.txt", 1494);
+////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_1_0_Dmela20160731.txt", 1494);
+////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_1_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Dmela20160731\\Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Dmela20160731\\Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Dmela20160731\\Dmela20160731.txt", 1494);
+//        }
+
+//        for(int i = 1000; i <= 8000; i += 1000){
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Scere20160731\\Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\0_0_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\0_0_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\1_0_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\1_0_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\1_1_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\1_1_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\2_0_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\2_0_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\2_1_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\2_1_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\1_0_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\1_0_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\2_0_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\2_0_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\2_1_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\2_1_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\3_0_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\3_0_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\3_1_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\3_1_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Scere20160731\\Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Scere20160731\\Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Scere20160731\\Scere20160731.txt", 2259);
+
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Scere20160731\\Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\0_0_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\0_0_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\1_0_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\1_0_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\1_1_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\1_1_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\2_0_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\2_0_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\2_1_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\2_1_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\1_0_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\1_0_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\2_0_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\2_0_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\2_1_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\2_1_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\3_0_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\3_0_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\3_1_0_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\3_1_1_Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Scere20160731\\Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Scere20160731\\Scere20160731.txt", 2259);
+//            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Scere20160731\\Scere20160731.txt", 2259);
+//        }
 
 
-        for(int i = 50; i <= 300; i += 50){
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Hpylo20160731\\Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\0_0_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\0_0_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\1_0_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\1_0_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\1_1_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\1_1_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\2_0_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\2_0_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\2_1_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hpylo20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hpylo20160731\\2_1_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\1_0_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\1_0_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\2_0_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\2_0_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\2_1_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\2_1_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\3_0_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\3_0_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\3_1_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hpylo20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hpylo20160731\\3_1_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Hpylo20160731\\Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Hpylo20160731\\Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Hpylo20160731\\Hpylo20160731.txt", 68);
-
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Hpylo20160731\\Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\0_0_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\0_0_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\1_0_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\1_0_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\1_1_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\1_1_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\2_0_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\2_0_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\2_1_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hpylo20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hpylo20160731\\2_1_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\1_0_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\1_0_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\2_0_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\2_0_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\2_1_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\2_1_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\3_0_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\3_0_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\3_1_0_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hpylo20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hpylo20160731\\3_1_1_Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Hpylo20160731\\Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Hpylo20160731\\Hpylo20160731.txt", 68);
-            KMeans.runKMeans(i, 675, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Hpylo20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Hpylo20160731\\Hpylo20160731.txt", 68);
-        }
-
-        for(int i = 100; i < 689; i += 100){
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Hsapi20160731\\Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\0_0_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\0_0_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\1_0_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\1_0_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\1_1_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\1_1_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\2_0_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\2_0_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\2_1_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Hsapi20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Hsapi20160731\\2_1_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\1_0_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\1_0_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\2_0_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\2_0_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\2_1_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\2_1_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\3_0_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\3_0_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\3_1_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Hsapi20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Hsapi20160731\\3_1_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Hsapi20160731\\Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Hsapi20160731\\Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Hsapi20160731\\Hsapi20160731.txt", 690);
-
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Hsapi20160731\\Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\0_0_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\0_0_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\1_0_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\1_0_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\1_1_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\1_1_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\2_0_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\2_0_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\2_1_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Hsapi20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Hsapi20160731\\2_1_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\1_0_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\1_0_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\2_0_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\2_0_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\2_1_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\2_1_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\3_0_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\3_0_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\3_1_0_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Hsapi20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Hsapi20160731\\3_1_1_Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Hsapi20160731\\Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Hsapi20160731\\Hsapi20160731.txt", 690);
-            KMeans.runKMeans(i, 6893, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Hsapi20160731\\Hsapi20160731.txt", 690);
-        }
-
-        for(int i = 50; i <= 500; i += 50){
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Mmusc20160731\\Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\0_0_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\0_0_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\1_0_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\1_0_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\1_1_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\1_1_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\2_0_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\2_0_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\2_1_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Mmusc20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Mmusc20160731\\2_1_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\1_0_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\1_0_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\2_0_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\2_0_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\2_1_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\2_1_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\3_0_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\3_0_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\3_1_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Mmusc20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Mmusc20160731\\3_1_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Mmusc20160731\\Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Mmusc20160731\\Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Mmusc20160731\\Mmusc20160731.txt", 238);
-
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Mmusc20160731\\Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\0_0_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\0_0_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\1_0_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\1_0_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\1_1_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\1_1_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\2_0_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\2_0_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\2_1_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Mmusc20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Mmusc20160731\\2_1_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\1_0_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\1_0_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\2_0_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\2_0_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\2_1_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\2_1_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\3_0_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\3_0_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\3_1_0_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Mmusc20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Mmusc20160731\\3_1_1_Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Mmusc20160731\\Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Mmusc20160731\\Mmusc20160731.txt", 238);
-            KMeans.runKMeans(i, 2376, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Mmusc20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Mmusc20160731\\Mmusc20160731.txt", 238);
-        }
-
-        for(int i = 50; i < 527; i += 50){
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Rnorv20160731\\Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\0_0_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\0_0_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\1_0_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\1_0_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\1_1_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\1_1_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\2_0_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\2_0_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\2_1_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Rnorv20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Rnorv20160731\\2_1_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\1_0_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\1_0_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\2_0_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\2_0_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\2_1_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\2_1_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\3_0_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\3_0_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\3_1_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Rnorv20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Rnorv20160731\\3_1_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Rnorv20160731\\Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Rnorv20160731\\Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Rnorv20160731\\Rnorv20160731.txt", 53);
-
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Rnorv20160731\\Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\0_0_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\0_0_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\1_0_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\1_0_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\1_1_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\1_1_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\2_0_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\2_0_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\2_1_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Rnorv20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Rnorv20160731\\2_1_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\1_0_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\1_0_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\2_0_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\2_0_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\2_1_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\2_1_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\3_0_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\3_0_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\3_1_0_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Rnorv20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Rnorv20160731\\3_1_1_Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Rnorv20160731\\Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Rnorv20160731\\Rnorv20160731.txt", 53);
-            KMeans.runKMeans(i, 527, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Rnorv20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Rnorv20160731\\Rnorv20160731.txt", 53);
-        }
-
-        for(int i = 100; i <= 500; i += 100){
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Ecoli20160731\\Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\0_0_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\0_0_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\1_0_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\1_0_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\1_1_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\1_1_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\2_0_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\2_0_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\2_1_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Ecoli20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Ecoli20160731\\2_1_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\1_0_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\1_0_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\2_0_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\2_0_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\2_1_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\2_1_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\3_0_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\3_0_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\3_1_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Ecoli20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Ecoli20160731\\3_1_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Ecoli20160731\\Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Ecoli20160731\\Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Ecoli20160731\\Ecoli20160731.txt", 1162);
-
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Ecoli20160731\\Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\0_0_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\0_0_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\1_0_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\1_0_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\1_1_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\1_1_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\2_0_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\2_0_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\2_1_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Ecoli20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Ecoli20160731\\2_1_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\1_0_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\1_0_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\2_0_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\2_0_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\2_1_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\2_1_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\3_0_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\3_0_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\3_1_0_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Ecoli20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Ecoli20160731\\3_1_1_Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Ecoli20160731\\Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Ecoli20160731\\Ecoli20160731.txt", 1162);
-            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Ecoli20160731\\Ecoli20160731.txt", 1162);
-        }
-
-        for(int i = 100; i <= 500; i += 100){
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Dmela20160731\\Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\0_0_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\0_0_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\1_0_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\1_0_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\1_1_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\1_1_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\2_0_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\2_0_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\2_1_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\2_1_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\1_0_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\1_0_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\2_0_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\2_0_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\2_1_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\2_1_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_0_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_0_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_1_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_1_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Dmela20160731\\Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Dmela20160731\\Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Dmela20160731\\Dmela20160731.txt", 1494);
-
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Dmela20160731\\Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\0_0_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\0_0_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\1_0_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\1_0_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\1_1_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\1_1_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\2_0_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\2_0_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\2_1_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Dmela20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Dmela20160731\\2_1_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\1_0_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\1_0_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\2_0_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\2_0_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\2_1_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\2_1_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_0_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_0_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_1_0_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_1_1_Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Dmela20160731\\Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Dmela20160731\\Dmela20160731.txt", 1494);
-            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Dmela20160731\\Dmela20160731.txt", 1494);
-        }
-
-        for(int i = 1000; i <= 8000; i += 1000){
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Scere20160731\\Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\0_0_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\0_0_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\1_0_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\1_0_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\1_1_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\1_1_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\2_0_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\2_0_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\2_1_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\2_1_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\1_0_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\1_0_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\2_0_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\2_0_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\2_1_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\2_1_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\3_0_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\3_0_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\3_1_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Scere20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Scere20160731\\3_1_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Scere20160731\\Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Scere20160731\\Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Scere20160731\\Scere20160731.txt", 2259);
-
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Scere20160731\\Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\0_0_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\0_0_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\1_0_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\1_0_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\1_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\1_1_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\1_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\1_1_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\2_0_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\2_0_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\2_1_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\2_1_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\1_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\1_0_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\1_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\1_0_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\2_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\2_0_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\2_0_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\2_1_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\2_1_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\3_0_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\3_0_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\3_1_0_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Scere20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Scere20160731\\3_1_1_Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Scere20160731\\Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Scere20160731\\Scere20160731.txt", 2259);
-            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Scere20160731\\Scere20160731.txt", 2259);
-        }
 
 
 

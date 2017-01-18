@@ -22,8 +22,10 @@ public class PSSM {
         line = bufferedReader.readLine();
         int lineNum = 0;
         while(line.length() > 5){
+//            System.out.println(lineNum + "\t" + line);
             calcSum(average, line);
             lineNum ++;
+
             line = bufferedReader.readLine();
         }
         bufferedReader.close();

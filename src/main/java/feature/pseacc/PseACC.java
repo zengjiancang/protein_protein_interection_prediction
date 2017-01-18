@@ -19,7 +19,7 @@ public class PseACC {
         {
             File file = files[i];
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "utf-8"));
-            BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(outputDirPath + "\\" + file.getName()), true), "utf-8"));
+            BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(outputDirPath + "\\" + file.getName()), false), "utf-8"));
             String lineString = bufferedReader.readLine();
 
             while(lineString != null)
@@ -30,6 +30,9 @@ public class PseACC {
                     if(lineString.charAt(j) == ':')
                     {
                         ++j;
+                        if(!Character.isDigit(lineString.charAt(j)) && lineString.charAt(j) != '-'){
+                            continue;
+                        }
                         while(lineString.charAt(j) != ' ')
                         {
 //                            bufferedWriter.write(lineString.charAt(j));
