@@ -2,7 +2,9 @@ package run;
 
 import data.AminoAcidsReorder;
 import data.ProteinRecombine;
+import feature.Ztest;
 import feature.featurefusion.FeatureFusion;
+import feature.mrmd.MRMD;
 import feature.pseacc.PseACC;
 import feature.pssm.PSSM;
 import feature.secondary.Secondary;
@@ -172,7 +174,7 @@ public class RunPPI {
 //
 //        //获取Kskip的bat执行文件
 
-//                KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 1, 0, 0, "ProteinRecombine");
+//        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 1, 0, 0, "ProteinRecombine");
 //        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 1, 0, 1, "ProteinRecombine");
 //        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 2, 0, 0, "ProteinRecombine");
 //        KSkipCommand.getKSkipBat("D:\\zjcDATA\\data\\negative\\ProteinRecombine", "D:\\zjcDATA\\data\\feature\\kskip\\ProteinRecombine", 2, 0, 1, "ProteinRecombine");
@@ -1035,6 +1037,14 @@ public class RunPPI {
 //        FeatureFusion.runFeatureFusionByArithmeticMean("D:\\zjcDATA\\data\\feature\\secondary_right\\Scere20160731", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\secondary_right\\Scere20160731");
 
         //多个特征文件合并成一个文件
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\error.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\error.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188\\Hsapi20160731",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188\\Hsapi20160731.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\error.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\error.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188\\AminoAcidsReorder",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188\\AminoAcidsReorder.txt");
 //        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_Celeg20160731_wrong.txt",
 //                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_Celeg20160731_wrong.txt",
 //                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188\\Celeg20160731",
@@ -1071,6 +1081,7 @@ public class RunPPI {
 //                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_Negatome_wrong.txt",
 //                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188\\Negatome",
 //                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188\\Negatome.txt");
+
 //
 //        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_Celeg20160731_wrong.txt",
 //                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_Celeg20160731_wrong.txt",
@@ -2932,6 +2943,113 @@ public class RunPPI {
 //                "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\secondary_right\\Negatome",
 //                "D:\\zjcDATA\\data\\featurefusion\\harmonicMean\\secondary_right\\Negatome.txt");
 
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_ProteinRecombine_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_ProteinRecombine_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188\\ProteinRecombine",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\188\\ProteinRecombine_188.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_ProteinRecombine_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_ProteinRecombine_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\0_0_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\ProteinRecombine_0_0_1_skip.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_ProteinRecombine_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_ProteinRecombine_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\1_0_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\ProteinRecombine_1_0_1_skip.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_ProteinRecombine_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_ProteinRecombine_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\1_1_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\ProteinRecombine_1_1_1_skip.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_ProteinRecombine_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_ProteinRecombine_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\2_0_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\ProteinRecombine_2_0_1_skip.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_ProteinRecombine_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_ProteinRecombine_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\2_1_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\kskip\\ProteinRecombine\\ProteinRecombine_2_1_1_skip.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_ProteinRecombine_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_ProteinRecombine_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\1_0_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\ProteinRecombine_1_0_1_ngram.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_ProteinRecombine_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_ProteinRecombine_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\2_0_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\ProteinRecombine_2_0_1_ngram.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_ProteinRecombine_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_ProteinRecombine_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\2_1_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\ProteinRecombine_2_1_1_ngram.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_ProteinRecombine_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_ProteinRecombine_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\3_0_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\ProteinRecombine_3_0_1_ngram.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_ProteinRecombine_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_ProteinRecombine_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\3_1_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\ngram\\ProteinRecombine\\ProteinRecombine_3_1_1_ngram.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_ProteinRecombine_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_ProteinRecombine_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\pssm_right\\ProteinRecombine",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\pssm\\ProteinRecombine_pssm.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\pssm_ProteinRecombine_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_ProteinRecombine_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\secondary_right\\ProteinRecombine",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\secondary\\ProteinRecombine_secondary.txt");
+
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188\\AminoAcidsReorder",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\188\\AminoAcidsReorder_188.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\0_0_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\AminoAcidsReorder_0_0_1_skip.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\1_0_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\AminoAcidsReorder_1_0_1_skip.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\1_1_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\AminoAcidsReorder_1_1_1_skip.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\2_0_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\AminoAcidsReorder_2_0_1_skip.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\2_1_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\kskip\\AminoAcidsReorder\\AminoAcidsReorder_2_1_1_skip.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\1_0_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\AminoAcidsReorder_1_0_1_ngram.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\2_0_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\AminoAcidsReorder_2_0_1_ngram.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\2_1_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\AminoAcidsReorder_2_1_1_ngram.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\3_0_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\AminoAcidsReorder_3_0_1_ngram.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\3_1_1",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\ngram\\AminoAcidsReorder\\AminoAcidsReorder_3_1_1_ngram.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\pssm_right\\AminoAcidsReorder",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\pssm\\AminoAcidsReorder_pssm.txt");
+//        ToOneFile.collectToOneFile("D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\ZJC_WORKSPACE\\protein_protein_interection_prediction\\src\\main\\resources\\secondary_AminoAcidsReorder_wrong.txt",
+//                "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\secondary_right\\AminoAcidsReorder",
+//                "E:\\zjcDATA\\featurefusion\\arithmeticMean\\secondary\\AminoAcidsReorder_secondary.txt");
+
+
         //kmeans抽样
 //        for(int i = 50; i <= 500; i += 50){
 //            KMeans.runKMeans(i, 2717, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Celeg20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Celeg20160731\\Celeg20160731.txt", 272);
@@ -3246,7 +3364,7 @@ public class RunPPI {
 //            KMeans.runKMeans(i, 11608, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Ecoli20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Ecoli20160731\\Ecoli20160731.txt", 1162);
 //        }
 //
-//        for(int i = 100; i <= 500; i += 100){
+//        for(int i = 1000; i <= 1000; i += 1000){
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Dmela20160731\\Dmela20160731.txt", 1494);
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\0_0_0_Dmela20160731.txt", 1494);
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Dmela20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Dmela20160731\\0_0_1_Dmela20160731.txt", 1494);
@@ -3264,10 +3382,10 @@ public class RunPPI {
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\2_0_1_Dmela20160731.txt", 1494);
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\2_1_0_Dmela20160731.txt", 1494);
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\2_1_1_Dmela20160731.txt", 1494);
-////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_0_0_Dmela20160731.txt", 1494);
-////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_0_1_Dmela20160731.txt", 1494);
-////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_1_0_Dmela20160731.txt", 1494);
-////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_1_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_0_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_0_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_1_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\arithmeticMean\\ngram\\Dmela20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\ngram\\Dmela20160731\\3_1_1_Dmela20160731.txt", 1494);
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Dmela20160731\\Dmela20160731.txt", 1494);
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Dmela20160731\\Dmela20160731.txt", 1494);
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Dmela20160731\\Dmela20160731.txt", 1494);
@@ -3289,16 +3407,16 @@ public class RunPPI {
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\2_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\2_0_1_Dmela20160731.txt", 1494);
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\2_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\2_1_0_Dmela20160731.txt", 1494);
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\2_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\2_1_1_Dmela20160731.txt", 1494);
-////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_0_0_Dmela20160731.txt", 1494);
-////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_0_1_Dmela20160731.txt", 1494);
-////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_1_0_Dmela20160731.txt", 1494);
-////            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_1_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_0_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_0_1_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_1_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_1_0_Dmela20160731.txt", 1494);
+//            KMeans.runKMeans(i, 14923, "E:\\zjcData\\featurefusion\\harmonicMean\\ngram\\Dmela20160731\\3_1_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\ngram\\Dmela20160731\\3_1_1_Dmela20160731.txt", 1494);
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\pseacc\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pseacc\\Dmela20160731\\Dmela20160731.txt", 1494);
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\pssm\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\pssm\\Dmela20160731\\Dmela20160731.txt", 1494);
 //            KMeans.runKMeans(i, 14922, "E:\\zjcData\\featurefusion\\harmonicMean\\secondary\\Dmela20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\secondary\\Dmela20160731\\Dmela20160731.txt", 1494);
 //        }
 
-//        for(int i = 1000; i <= 8000; i += 1000){
+//        for(int i = 1000; i <= 1000; i += 1000){
 //            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\188\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\188\\Scere20160731\\Scere20160731.txt", 2259);
 //            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\0_0_0_Scere20160731.txt", 2259);
 //            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\kskip\\Scere20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\kskip\\Scere20160731\\0_0_1_Scere20160731.txt", 2259);
@@ -3323,7 +3441,7 @@ public class RunPPI {
 //            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\pseacc\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pseacc\\Scere20160731\\Scere20160731.txt", 2259);
 //            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\pssm\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\pssm\\Scere20160731\\Scere20160731.txt", 2259);
 //            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\arithmeticMean\\secondary\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\arithmeticMean\\secondary\\Scere20160731\\Scere20160731.txt", 2259);
-
+//
 //            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\188\\Scere20160731.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\188\\Scere20160731\\Scere20160731.txt", 2259);
 //            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\0_0_0.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\0_0_0_Scere20160731.txt", 2259);
 //            KMeans.runKMeans(i, 22561, "E:\\zjcData\\featurefusion\\harmonicMean\\kskip\\Scere20160731\\0_0_1.txt", "D:\\zjcDATA\\data\\kmeans\\harmonicMean\\kskip\\Scere20160731\\0_0_1_Scere20160731.txt", 2259);
@@ -3351,8 +3469,125 @@ public class RunPPI {
 //        }
 
 
+        //构造arff文件
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_0_0_1_skip.txt", "D:\\zjcDATA\\data\\reorderNew\\Hsapi_0_0_1_ksip.txt", "D:\\zjcDATA\\data\\reorderNew", 6237, 400);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_1_0_1_ngram.txt", "D:\\zjcDATA\\data\\reorderNew\\Hsapi_1_0_1_ngram.txt", "D:\\zjcDATA\\data\\reorderNew", 6237, 20);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_1_0_1_skip.txt", "D:\\zjcDATA\\data\\reorderNew\\Hsapi_1_0_1_kskip.txt", "D:\\zjcDATA\\data\\reorderNew", 6237, 400);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_1_1_1_skip.txt", "D:\\zjcDATA\\data\\reorderNew\\Hsapi_1_1_1_kskip.txt", "D:\\zjcDATA\\data\\reorderNew", 6237, 800);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_2_0_1_ngram.txt", "D:\\zjcDATA\\data\\reorderNew\\Hsapi_2_0_1_ngram.txt", "D:\\zjcDATA\\data\\reorderNew", 6237, 400);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_2_0_1_skip.txt", "D:\\zjcDATA\\data\\reorderNew\\Hsapi_2_0_1_kskip.txt", "D:\\zjcDATA\\data\\reorderNew", 6237, 400);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_2_1_1_ngram.txt", "D:\\zjcDATA\\data\\reorderNew\\Hsapi_2_1_1_ngram.txt", "D:\\zjcDATA\\data\\reorderNew", 6237, 420);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_2_1_1_skip.txt", "D:\\zjcDATA\\data\\reorderNew\\Hsapi_2_1_1_kskip.txt", "D:\\zjcDATA\\data\\reorderNew", 6237, 1200);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_188.txt", "D:\\zjcDATA\\data\\reorderNew\\Hsapi20160731_188.txt", "D:\\zjcDATA\\data\\reorderNew", 6237, 189);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_secondary.txt", "D:\\zjcDATA\\data\\reorderNew\\Hsapi20160731_secondary.txt", "D:\\zjcDATA\\data\\reorderNew", 6237, 12);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188\\AminoAcidsReorder.txt", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188\\Hsapi20160731.txt", "D:\\zjcDATA\\data\\featurefusion\\arithmeticMean\\188", 6237, 189);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\Negatome_188.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\188.txt", "E:\\zjcDATA\\arff", 6237, 189);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\AminoAcidsReorder_188.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\188.txt", "E:\\zjcDATA\\arff", 6237, 189);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\ProteinRecombine_188.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\188.txt", "E:\\zjcDATA\\arff", 6237, 189);
+
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\Negatome_pssm.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\pssm.txt", "E:\\zjcDATA\\arff", 6237, 40);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\AminoAcidsReorder_pssm.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\pssm.txt", "E:\\zjcDATA\\arff", 6237, 40);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\ProteinRecombine_pssm.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\pssm.txt", "E:\\zjcDATA\\arff", 6237, 40);
+//
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\Negatome_secondary.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\secondary.txt", "E:\\zjcDATA\\arff", 6237, 12);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\AminoAcidsReorder_secondary.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\secondary.txt", "E:\\zjcDATA\\arff", 6237, 12);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\ProteinRecombine_secondary.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\secondary.txt", "E:\\zjcDATA\\arff", 6237, 12);
+//
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\Negatome_0_0_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\0_0_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 400);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\AminoAcidsReorder_0_0_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\0_0_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 400);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\ProteinRecombine_0_0_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\0_0_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 400);
+//
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\Negatome_1_0_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\1_0_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 400);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\AminoAcidsReorder_1_0_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\1_0_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 400);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\ProteinRecombine_1_0_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\1_0_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 400);
+//
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\Negatome_2_0_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\2_0_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 400);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\AminoAcidsReorder_2_0_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\2_0_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 400);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\ProteinRecombine_2_0_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\2_0_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 400);
+//
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\Negatome_2_1_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\2_1_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 1200);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\AminoAcidsReorder_2_1_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\2_1_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 1200);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\ProteinRecombine_2_1_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\2_1_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 1200);
+//
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\Negatome_1_1_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\1_1_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 800);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\AminoAcidsReorder_1_1_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\1_1_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 800);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\ProteinRecombine_1_1_1_kskip.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\1_1_1_kskip.txt", "E:\\zjcDATA\\arff", 6237, 800);
+//
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\Negatome_1_0_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\1_0_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 20);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\AminoAcidsReorder_1_0_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\1_0_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 20);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\ProteinRecombine_1_0_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\1_0_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 20);
+//
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\Negatome_2_0_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\2_0_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 400);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\AminoAcidsReorder_2_0_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\2_0_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 400);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\ProteinRecombine_2_0_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\2_0_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 400);
+//
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\Negatome_2_1_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\2_1_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 420);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\AminoAcidsReorder_2_1_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\2_1_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 420);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\ProteinRecombine_2_1_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\2_1_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 420);
+//
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\Negatome_3_0_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\3_0_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 8000);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\AminoAcidsReorder_3_0_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\3_0_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 8000);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\ProteinRecombine_3_0_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\3_0_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 8000);
+//
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\Negatome_3_1_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\3_1_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 8420);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\AminoAcidsReorder_3_1_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\3_1_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 8420);
+//        GetArffFiles.constructArffFile("D:\\zjcDATA\\data\\negativeData\\ProteinRecombine_3_1_1_ngram.txt", "D:\\zjcDATA\\data\\positiveAfterKmeans\\3_1_1_ngram.txt", "E:\\zjcDATA\\arff", 6237, 8420);
+
+//        FeatureCombination.runFeatureCombination("D:\\zjcDATA\\data\\conbination\\Negatome_combination.arff", 1861, 5, "E:\\zjcData\\arff\\Negatome_2_1_1_kskip.arff", "E:\\zjcData\\arff\\Negatome_2_1_1_ngram.arff", "E:\\zjcData\\arff\\Negatome_188.arff", "E:\\zjcData\\arff\\Negatome_pssm.arff", "E:\\zjcData\\arff\\Negatome_secondary.arff");
+//        FeatureCombination.runFeatureCombination("D:\\zjcDATA\\data\\conbination\\ProteinRecombine_combination.arff", 1861, 5, "E:\\zjcData\\arff\\ProteinRecombine_2_1_1_kskip.arff", "E:\\zjcData\\arff\\ProteinRecombine_2_1_1_ngram.arff", "E:\\zjcData\\arff\\ProteinRecombine_188.arff", "E:\\zjcData\\arff\\ProteinRecombine_pssm.arff", "E:\\zjcData\\arff\\ProteinRecombine_secondary.arff");
+//        FeatureCombination.runFeatureCombination("D:\\zjcDATA\\data\\conbination\\AminoAcidsReorder_combination.arff", 1821, 4, "D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_2_1_1_skip.arff", "D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_2_1_1_ngram.arff", "D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_188.arff", "D:\\zjcDATA\\data\\reorderNew\\AminoAcidsReorder_secondary.arff");
+        //z test特征选择
+
+//        Ztest.calcZtest("D:\\zjcDATA\\data\\conbination\\Negatome_combination.arff", "D:\\zjcDATA\\data\\conbination\\Negatome_ztest.txt", 6237, 1861);
+//        Ztest.calcZtest("D:\\zjcDATA\\data\\conbination\\AminoAcidsReorder_combination.arff", "D:\\zjcDATA\\data\\conbination\\AminoAcidsReorder_ztest.txt", 6237, 1821);
+//        Ztest.calcZtest("D:\\zjcDATA\\data\\conbination\\ProteinRecombine_combination.arff", "D:\\zjcDATA\\data\\conbination\\ProteinRecombine_ztest.txt", 6237, 1861);
 
 
+        //mrmd
+        MRMD mrmd = new MRMD();
+        mrmd.runMRMD("D:\\zjcDATA\\data\\conbination\\Negatome_combination.arff", "D:\\zjcDATA\\data\\conbination\\Negatome_mrmd.txt", 12474, 1861);
+        mrmd.runMRMD("D:\\zjcDATA\\data\\conbination\\AminoAcidsReorder_combination.arff", "D:\\zjcDATA\\data\\conbination\\AminoAcidsReorder_mrmd.txt", 12474, 1861);
+        mrmd.runMRMD("D:\\zjcDATA\\data\\conbination\\ProteinRecombine_combination.arff", "D:\\zjcDATA\\data\\conbination\\ProteinRecombine_mrmd.txt", 12474, 1861);
+
+//        mrmd.runMRMD("E:\\zjcData\\arff\\Negatome_secondary.arff", 12474, 12);
+
+        FeatureSelect fs = new FeatureSelect();
+//        fs.getMRMDFeature("E:\\zjcData\\mrmd\\mrmd.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\mrmd1200.arff", 1200);
+//        fs.getMRMDFeature("E:\\zjcData\\mrmd\\mrmd.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\mrmd1000.arff", 1000);
+//        fs.getMRMDFeature("E:\\zjcData\\mrmd\\mrmd.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\mrmd800.arff", 800);
+//        fs.getMRMDFeature("E:\\zjcData\\mrmd\\mrmd.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\mrmd600.arff", 600);
+//        fs.getMRMDFeature("E:\\zjcData\\mrmd\\mrmd.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\mrmd400.arff", 400);
+//        fs.getMRMDFeature("E:\\zjcData\\mrmd\\mrmd.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\mrmd200.arff", 200);
+//
+//        fs.getInforGainFeature("E:\\zjcData\\mrmd\\inforGain.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\inforGain1200.arff", 1200);
+//        fs.getInforGainFeature("E:\\zjcData\\mrmd\\inforGain.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\inforGain1000.arff", 1000);
+//        fs.getInforGainFeature("E:\\zjcData\\mrmd\\inforGain.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\inforGain800.arff", 800);
+//        fs.getInforGainFeature("E:\\zjcData\\mrmd\\inforGain.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\inforGain600.arff", 600);
+//        fs.getInforGainFeature("E:\\zjcData\\mrmd\\inforGain.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\inforGain400.arff", 400);
+//        fs.getInforGainFeature("E:\\zjcData\\mrmd\\inforGain.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\inforGain200.arff", 200);
+//
+//        fs.getZtestFeature("E:\\zjcData\\mrmd\\ztest.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\ztest1200.arff", 1200);
+//        fs.getZtestFeature("E:\\zjcData\\mrmd\\ztest.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\ztest1000.arff", 1000);
+//        fs.getZtestFeature("E:\\zjcData\\mrmd\\ztest.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\ztest800.arff", 800);
+//        fs.getZtestFeature("E:\\zjcData\\mrmd\\ztest.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\ztest600.arff", 600);
+//        fs.getZtestFeature("E:\\zjcData\\mrmd\\ztest.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\ztest400.arff", 400);
+//        fs.getZtestFeature("E:\\zjcData\\mrmd\\ztest.txt", "E:\\zjcData\\arff\\combination.arff", "E:\\zjcData\\featureSelect\\ztest200.arff", 200);
+
+//        CountFeatureDistribution.countMRMD("E:\\zjcData\\mrmd\\mrmd.txt", 800);
+//        CountFeatureDistribution.countMRMD("E:\\zjcData\\mrmd\\mrmd.txt", 1000);
+//        CountFeatureDistribution.countZtest("E:\\zjcData\\mrmd\\ztest.txt", 200);
+//        CountFeatureDistribution.countZtest("E:\\zjcData\\mrmd\\ztest.txt", 400);
+//        CountFeatureDistribution.countZtest("E:\\zjcData\\mrmd\\ztest.txt", 600);
+//        CountFeatureDistribution.countZtest("E:\\zjcData\\mrmd\\ztest.txt", 800);
+//        CountFeatureDistribution.countZtest("E:\\zjcData\\mrmd\\ztest.txt", 1000);
+//        CountFeatureDistribution.countZtest("E:\\zjcData\\mrmd\\ztest.txt", 1200);
+//        CountFeatureDistribution.countZtest("E:\\zjcData\\mrmd\\ztest.txt", 1460);
+//        CountFeatureDistribution.countInforGain("E:\\zjcData\\mrmd\\inforGain.txt", 200);
+//        CountFeatureDistribution.countInforGain("E:\\zjcData\\mrmd\\inforGain.txt", 400);
+//        CountFeatureDistribution.countInforGain("E:\\zjcData\\mrmd\\inforGain.txt", 600);
+//        CountFeatureDistribution.countInforGain("E:\\zjcData\\mrmd\\inforGain.txt", 800);
+//        CountFeatureDistribution.countInforGain("E:\\zjcData\\mrmd\\inforGain.txt", 1000);
+//        CountFeatureDistribution.countInforGain("E:\\zjcData\\mrmd\\inforGain.txt", 1200);
 
     }
 }

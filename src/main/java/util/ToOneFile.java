@@ -33,12 +33,12 @@ public class ToOneFile {
         int fileNum = 0;
         for(File file: inputFiles){
             String fileName = file.getName().split("\\.")[0];
-            System.out.print(file.getAbsolutePath() + "\t");
+//            System.out.print(file.getAbsolutePath() + "\t");
             if(wrongFileSet.contains(fileName)){
-                System.out.println();
+//                System.out.println();
                 continue;
             }
-            System.out.println("run!!!");
+//            System.out.println("run!!!");
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "utf-8"));
             String line = bufferedReader.readLine();
             while(line != null){
